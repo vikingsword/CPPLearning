@@ -1,0 +1,10 @@
+vikingar
+exit
+0
+vikingar
+niemandea
+hello
+cat
+tom
+jerry
+0
