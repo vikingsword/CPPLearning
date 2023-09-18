@@ -14,7 +14,7 @@ using namespace std;
  * p31 file io
  */
 void test01() {
-    ofstream ofs ("./essential_c++/ch1/test.txt", ios::app);
+    ofstream ofs("./essential_c++/ch1/test.txt", ios::app);
     if (!ofs) {
         cout << "文件打开失败！" << endl;
     } else {
@@ -24,6 +24,7 @@ void test01() {
     ofs.write("hello", 10);
     ofs.close();
 }
+
 void test02() {
     ifstream ifs("./essential_c++/ch1/test.txt", ios::in);
     string name = "zs";
@@ -55,24 +56,42 @@ void test04() {
             cout << "please input string: " << endl;
             cin >> input;
             ofs << input << endl;
+            ofs.close();
         }
     } else {
         cerr << "can't open this file" << endl;
     }
 }
 
-void test() {
+void test05() {
+
+    std::fstream file("./essential_c++/ch1/file/demo2.txt", std::ios::in | ios::app); // 以读写模式打开文件
+
+    if (file.is_open()) {
+        std::string line;
+        while (std::getline(file, line)) {
+            std::cout << line << std::endl; // 读取并输出文件内容
+        }
+
+        file << "This is a new line." << std::endl; // 写入新的内容
+
+        file.close(); // 关闭文件
+    } else {
+        std::cerr << "无法打开文件" << std::endl;
+    }
 
 }
+
+void test() {}
 
 int main() {
 
 //    test01();
 //    test02();
 //    test03();
-    test04();
+//    test04();
+    test05();
 
-    test();
 
     return 0;
 }
