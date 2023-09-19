@@ -82,6 +82,33 @@ void test05() {
 
 }
 
+void test06() {
+    ofstream ofs("./essential_c++/ch1/file/demo2.txt", ios::app);
+    if (ofs.is_open()) {
+        string input;
+        cin >> input;
+        cout << "please input your content to file: ";
+        while (input != "exit") {
+            ofs << input << endl;
+            cin >> input;
+        }
+    }
+}
+void test07() {
+    fstream iofile("./essential_c++/ch1/file/demo2.txt", ios_base::in|ios_base::app);
+    if (!iofile) {
+        cout << "can't open file" << endl;
+    } else {
+        string input;
+        cin >> input;
+        while (input != "exit") {
+            cout << "input your content , type exit to end" ;
+
+        }
+        iofile.seekg(0);
+    }
+}
+
 void test() {}
 
 int main() {
@@ -90,8 +117,8 @@ int main() {
 //    test02();
 //    test03();
 //    test04();
-    test05();
-
+//    test05();
+    test06();
 
     return 0;
 }
