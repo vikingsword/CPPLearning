@@ -8,4 +8,6 @@ add_executable(BookLearning main.cpp
         essential_c++/ch1/demo2.cpp
         essential_c++/ch2/demo1.cpp
         essential_c++/ch2/demo2.cpp
-        essential_c++/ch2/demo3.cpp)
+        essential_c++/ch2/demo3.cpp
+        essential_c++/trick/lambda.cpp
+        essential_c++/ch3/demo1.cpp)
