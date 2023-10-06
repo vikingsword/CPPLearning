@@ -11,4 +11,7 @@ add_executable(BookLearning main.cpp
         essential_c++/ch2/demo3.cpp
         essential_c++/trick/lambda.cpp
         essential_c++/ch3/demo1.cpp
-        essential_c++/temp/temp1.cpp)
+        essential_c++/temp/temp1.cpp
+        c++_primer/ch1/test/test01.cpp
+        c++_primer/ch1/p5.cpp
+        c++_primer/ch1/test/test02.cpp)
