@@ -45,8 +45,57 @@ void demo1() {
         cerr << "Data must be refer to same ISBN." << endl;
         return;
     }
+}
+
+/**
+ * p21 prac
+ */
+void prac1_23() {
+    Sales_item current_item, item;
+    if (cin >> current_item) {
+        int cnt = 1;
+        while (cin >> item) {
+            if (item.isbn() == current_item.isbn()) {
+                cnt++;
+            } else {
+                cout << "current item " << current_item.isbn() << " occurs " << cnt << " times.";
+                current_item = item;
+                cnt = 1;
+            }
+            if (item.isbn() == "-1") {
+                return;
+            }
+        }
+    }
+}
+void demo2() {
+    prac1_23();
+}
 
 
+/**
+ * p21 + prac 1.25
+ */
+void demo3() {
+    Sales_item total;
+    if (cin >> total) {
+        Sales_item trans;
+        while (cin >> trans) {
+            if (total.isbn() == trans.isbn()) {
+                total += trans;
+            } else {
+                cout << "total = " << total << endl;
+                total = trans;
+            }
+            if (trans.isbn() == "-1") {
+                break;
+            }
+        }
+//        cout << "total = " << total << endl;
+    } else {
+        cout << "No data?" << endl;
+        return;
+    }
 }
 
 
@@ -55,9 +104,9 @@ void demo1() {
 void demo() {}
 int main() {
 
-    demo1();
+//    demo1();
 //    demo2();
-//    demo3();
+    demo3();
 //    demo4();
 //    demo5();
 //    demo6();
