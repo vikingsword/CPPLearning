@@ -15,5 +15,5 @@ add_executable(BookLearning main.cpp
         c++_primer/ch1/test/test01.cpp
         c++_primer/ch1/p5_p17.cpp
         c++_primer/ch1/test/test02.cpp
-        c++_primer/ch1/p18.cpp
+        c++_primer/ch1/p18_p25.cpp
         c++_primer/ch1/headers/Sales_item.h)
