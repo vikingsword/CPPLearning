@@ -91,7 +91,6 @@ void demo3() {
                 break;
             }
         }
-//        cout << "total = " << total << endl;
     } else {
         cout << "No data?" << endl;
         return;
