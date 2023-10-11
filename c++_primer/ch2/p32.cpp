@@ -15,6 +15,7 @@ void demo1(){
     bool b = 43;
     cout << b << endl;
 
+
     int i = b;
     cout << i << endl;
 }
